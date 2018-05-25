@@ -1,0 +1,31 @@
+  <div class="single-post post-style-2 post-style-3">
+                                    @if(!empty($profile))
+                                        <div class="blog-info">
+
+                                            <h4 class="title"><a href="#"><b>{{ $profile->name }}</b></a></h4>
+                                            @else
+                                                <p></p>
+                                            @endif
+
+                                            @if(!empty($profile))
+                                            <p class="lead"> {{ $profile->designation }} </p>
+                                                @else
+                                                    <p></p>
+                                            @endif
+
+                                            @if(!empty($profile))
+                                            <div class="avatar-area">
+                                                <a class="avatar" href="#"><img src="{{ $profile->profile_image }}" alt="Profile Image"></a>
+                                                @else
+                                                    <img src="{{ url('images/avatar-empty.png') }}"
+                                                         class="avatar-empty" alt="">
+                                                @endif
+                                                <div class="right-area">
+                                                </div>
+                                            </div>
+
+
+
+                                        </div><!-- blog-right -->
+
+                                </div><!-- single-post extra-blog -->
